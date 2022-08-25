@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/michaeltshen/Desktop/capstone/MOTION-STATIC'
+make: Leaving directory '/home/michaeltshen/Desktop/capstone/MOTION-STATIC'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+

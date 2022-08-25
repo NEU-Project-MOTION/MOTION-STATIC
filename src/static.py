@@ -32,10 +32,52 @@ def build_banner():
         ],
     )
 
+def build_high_level():
+    return html.Div(
+        id="images",
+        className="images",
+        children=[
+            dcc.Tabs(
+                id="app-tabs",
+                value="tab2",
+                className="custom-tabs",
+                children=[
+                    dcc.Tab(
+                        id="Specs-tab",
+                        label="High Level Images",
+                        value="tab1",
+                        className="custom-tab",
+                        selected_className="custom-tab--selected",
+                    ),
+                    dcc.Tab(
+                        id="Control-chart-tab",
+                        label="Sensor Output",
+                        value="tab2",
+                        className="custom-tab",
+                        selected_className="custom-tab--selected",
+                    ),
+                ],
+            )
+        ],
+    )
+
 app.layout = html.Div(
     id="big-app-container",
     children=[
-    build_banner()
+    build_banner(),
+    dcc.Interval(
+            id="interval-component",
+            interval=2 * 1000,  # in milliseconds
+            n_intervals=50,  # start at batch 50
+            disabled=True,
+        ),
+        html.Div(
+            id="app-container",
+            children=[
+                build_high_level(),
+                html.Div(id="app-content"),
+            ],
+        ),
 ])
 
 if __name__ == '__main__':
