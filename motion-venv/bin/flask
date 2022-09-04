@@ -1,4 +1,4 @@
-#!/home/michaeltshen/Desktop/capstone/MOTION-STATIC/motion-venv/bin/python3
+#!/home/michaeltshen/Desktop/capstone/MOTION-STATIC/motion-venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
